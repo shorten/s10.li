@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <script type="text/javascript">
-  window.location.href = 'https://shorten.li';
+  if(location.pathname.length > 1) {
+    window.location.href = 'https://git.io' + location.pathname;
+  }
+  else {
+    window.location.href = 'https://shorten.li/m?u="' + encodeURI(window.location.href) +'"';
+  }
 </script>
 <title>shorten.li - redirecting...</title>
 </head>
